@@ -2,7 +2,7 @@ package school.redrover;
 
 public class Main {
     public static void main(String[] args) {
-        // https://www.codewars.com/kata/545cedaa9943f7fe7b000048
+        //Task1 https://www.codewars.com/kata/545cedaa9943f7fe7b000048
 
         // https://www.codewars.com/kata/55f8a9c06c018a0d6e000132
 
@@ -15,7 +15,6 @@ public class Main {
         // https://www.codewars.com/kata/585d7d5adb20cf33cb000235
 
     }
-
 
 
 }
