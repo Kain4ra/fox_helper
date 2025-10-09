@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         //Task1 https://www.codewars.com/kata/545cedaa9943f7fe7b000048
 
-        // https://www.codewars.com/kata/55f8a9c06c018a0d6e000132
+        // Task2 Regex validate PIN https://www.codewars.com/kata/55f8a9c06c018a0d6e000132
 
         // https://www.codewars.com/kata/55fd2d567d94ac3bc9000064
 
