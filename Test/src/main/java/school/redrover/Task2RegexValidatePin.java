@@ -16,7 +16,29 @@ public class Task2RegexValidatePin {
         System.out.println("-----------with regex:");
         System.out.println(ZinaTask2_ValidatePin.regexValidatePin("1234"));
         System.out.println(ZinaTask2_ValidatePin.regexValidatePin("a123"));
+
+        System.out.println("-------Tatiana------");
+        System.out.println(validatePinTatiana("1234"));
+        System.out.println(validatePinTatiana("123"));
+        System.out.println(validatePinTatiana("a123"));
+        System.out.println(validatePinTatiana("123456"));
+        System.out.println(validatePinTatiana("1234567"));
     }
 
-}
+        public static boolean validatePinTatiana (String pin){
+            if (pin == null) {
+                return false;
+            }
+            int len = pin.length();
+            if (len != 4 && len != 6) {
+                return false;
+            }
+            for (char p : pin.toCharArray()) {
+                if (!Character.isDigit(p)) {
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
 
