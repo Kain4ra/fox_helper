@@ -4,14 +4,14 @@ package school.redrover;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Task1 {
+public class Task1_Panagram {
     public static void main(String[] args) {
         String str = "The quick brown fox jumps over the lazy dog";
         String str2 = "The quick Yellow fox jumps over the lazy COW";
 
 
-        System.out.println("Zina's: " + isPangramZina( str));
-        System.out.println("Zina's: " + isPangramZina( str2));
+        System.out.println("Zina's: " + checkZina(str));
+        System.out.println("Zina's: " + checkZina(str2));
 
     }
 
@@ -24,8 +24,7 @@ public class Task1 {
     }
 
 
-
-    public static boolean isPangramZina(String expression) {
+    public static boolean checkZina(String expression) {
         StringBuilder sb = new StringBuilder();
         boolean result = false;
         for (char e : expression.toCharArray()) {
