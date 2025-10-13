@@ -13,6 +13,8 @@ public class Task1_Panagram {
         System.out.println("Zina's: " + checkZina(str));
         System.out.println("Zina's: " + checkZina(str2));
 
+        System.out.println("Yuliya's: " + checkYuliya(str));
+        System.out.println("Yuliya's: " + checkYuliya(str2));
     }
 
     public static boolean checkKain4ra(String sentence) {
@@ -22,7 +24,6 @@ public class Task1_Panagram {
         }
         return listCharacters.size() == 26;
     }
-
 
     public static boolean checkZina(String expression) {
         StringBuilder sb = new StringBuilder();
@@ -41,15 +42,34 @@ public class Task1_Panagram {
         return result;
     }
 
-    public static boolean checkTina(String sentence){
+    public static boolean checkTina(String sentence) {
         String s = "abcdefghijklmnopqrstuvwxyz";
         String str = "";
-        for(int i = 0; i < sentence.length(); i++) {
+        for (int i = 0; i < sentence.length(); i++) {
             char c = sentence.toLowerCase().toCharArray()[i];
             if ((s.indexOf(c) != -1) && (str.indexOf(c) == -1)) {
                 str += Character.toLowerCase(c);
             }
         }
         return str.length() == 26;
+    }
+
+    public static boolean checkYuliya(String sentence) {
+        HashSet<Character> alphabet = new HashSet<>();
+        for (char i = 'a'; i <= 'z'; i++) {
+            alphabet.add(i);
+        }
+        System.out.println("Alphabet: " + alphabet);
+
+        String updated = sentence.toLowerCase().replaceAll("[\\d\\p{Punct} ]+", "");
+        char[] initialSentence = updated.toCharArray();
+        HashSet<Character> sentenceChar = new HashSet<>();
+
+        for (char c : initialSentence) {
+            sentenceChar.add(c);
+        }
+        System.out.println("Sentence: " + sentenceChar);
+
+        return sentenceChar.containsAll(alphabet);
     }
 }
