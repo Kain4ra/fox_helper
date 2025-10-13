@@ -13,6 +13,9 @@ public class Task1_Panagram {
         System.out.println("Zina's: " + checkZina(str));
         System.out.println("Zina's: " + checkZina(str2));
 
+        System.out.println("----------Tatiana----------");
+        System.out.println(checkTatiana("Hello world!"));
+        System.out.println(checkTatiana("The quick brown fox jumps over the lazy dogHello world!"));
     }
 
     public static boolean checkKain4ra(String sentence) {
@@ -52,4 +55,20 @@ public class Task1_Panagram {
         }
         return str.length() == 26;
     }
+
+    public static boolean checkTatiana(String sentence) {
+        if (sentence == null) return false;
+
+        sentence = sentence.toLowerCase();
+
+        Set<Character> letters = new HashSet<>();
+
+        for (char c : sentence.toCharArray()) {
+            if (c >= 'a' && c <= 'z') {
+                letters.add(c);
+            }
+        }
+        return letters.size() == 26;
+    }
+
 }
