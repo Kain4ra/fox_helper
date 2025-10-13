@@ -22,6 +22,11 @@ public class Task2_ValidatePin {
         System.out.println(validatePinTatiana("a123"));
         System.out.println(validatePinTatiana("123456"));
         System.out.println(validatePinTatiana("1234567"));
+
+        System.out.println("\n-------Yuliya-------");
+        System.out.println(validatePinYuliya("1234")); //true
+        System.out.println(validatePinYuliya("12345")); //false
+        System.out.println(validatePinYuliya("a234")); //false
     }
 
     public static boolean validatePinTatiana(String pin) {
@@ -51,7 +56,6 @@ public class Task2_ValidatePin {
         return true;
     }
 
-
     public static boolean validatePinZina2(String pin) {
         return pin.matches("^\\d{4}$|^\\d{6}$");
     }
@@ -63,5 +67,8 @@ public class Task2_ValidatePin {
             return false;
         }
     }
-}
 
+    public static boolean validatePinYuliya(String pin) {
+        return pin.matches("^\\d{4}$|^\\d{6}$");
+    }
+}
