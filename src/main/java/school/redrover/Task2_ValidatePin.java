@@ -55,5 +55,13 @@ public class Task2_ValidatePin {
     public static boolean validatePinZina2(String pin) {
         return pin.matches("^\\d{4}$|^\\d{6}$");
     }
+
+    public static boolean validatePinTina(String pin) {
+        if ((pin.length() == 4 || pin.length() == 6) && pin.matches("^\\d+$")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 

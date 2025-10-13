@@ -40,4 +40,16 @@ public class Task1_Panagram {
         }
         return result;
     }
+
+    public static boolean checkTina(String sentence){
+        String s = "abcdefghijklmnopqrstuvwxyz";
+        String str = "";
+        for(int i = 0; i < sentence.length(); i++) {
+            char c = sentence.toLowerCase().toCharArray()[i];
+            if ((s.indexOf(c) != -1) && (str.indexOf(c) == -1)) {
+                str += Character.toLowerCase(c);
+            }
+        }
+        return str.length() == 26;
+    }
 }
